@@ -1,0 +1,77 @@
+<!-- Product tabs -->
+<ul class="nav nav-pills">
+  <li [class.active]="tab === 1">
+    <a href="#" (click)="setTab(1)" onclick="return false">Description</a>
+  </li>
+  <li [class.active]="tab === 2">
+    <a href="#" (click)="setTab(2)" onclick="return false">Specs</a>
+  </li>
+  <li [class.active]="tab === 3">
+    <a href="#" (click)="setTab(3)" onclick="return false">Reviews</a>
+  </li>
+</ul>
+
+<!-- Description Tab Content -->
+<div *ngIf="tab === 1">
+  <h4>Description</h4>
+  <blockquote>{{ gem.description }}</blockquote>
+</div>
+
+<!-- Specs Tab Content -->
+<div *ngIf="tab === 2">
+  <h4>Specs</h4>
+  <ul class="list-unstyled">
+    <li>
+      <strong>Shine</strong>: Product Shine
+    </li>
+    <li>
+      <strong>Faces</strong>: Product Faces
+    </li>
+    <li>
+      <strong>Rarity</strong>: Product Rarity
+    </li>
+    <li>
+      <strong>Color</strong>: Product Color
+    </li>
+  </ul>
+</div>
+
+<!-- Reviews Tab Content -->
+<div *ngIf="tab === 3">
+  <ul class="list-unstyled">
+    <h4>Reviews</h4>
+    <li>
+      <blockquote>
+        <strong>Review Stars</strong>
+        Review Body
+        <cite class="clearfix">
+          &mdash;Review Author
+        </cite>
+      </blockquote>
+
+      <!-- Review Form -->
+      <form action="">
+        <h4>Submit a Review</h4>
+        <fieldset class="form-group">
+          <select class="form-control" title="Stars">
+            <option disabled>Rate the Product</option>
+            <option value>★</option>
+            <option value>★★</option>
+            <option value>★★★</option>
+            <option value>★★★★</option>
+            <option value>★★★★★</option>
+          </select>
+        </fieldset>
+        <fieldset class="form-group">
+          <textarea class="form-control" cols="30" rows="10" placeholder="Write a short review of the product..."></textarea>
+        </fieldset>
+        <fieldset class="form-group">
+          <input type="email" class="form-control" placeholder="student@codingtemple.com" title="Email" />
+        </fieldset>
+        <fieldset class="form-group">
+          <input type="submit" value="Submit Review" class="btn btn-primary pull-right" />
+        </fieldset>
+      </form>
+    </li>
+  </ul>
+</div>
