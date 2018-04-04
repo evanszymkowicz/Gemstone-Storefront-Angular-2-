@@ -30,5 +30,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Feel free to clone this repository for learning and adaptation purposes. Please submit pull requests as you find errors, if necessary.
 
-## <Strong> April 4 </Strong>:
+## April 4
 One path error in the Node.js file is causing an error. I'm on it.
