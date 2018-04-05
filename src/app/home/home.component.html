@@ -1,1 +1,10 @@
-<app-gem *ngFor="let gem of homeGems" [gem]="gem"></app-gem>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10">
+      <app-gem *ngFor="let gem of homeGems" [gem]="gem"></app-gem>
+    </div>
+      <div class="col-md-2">
+      Shopping Cart
+    </div>
+  </div>
+</div>

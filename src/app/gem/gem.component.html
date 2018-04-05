@@ -1,5 +1,4 @@
-<div class="container">
-  <div class="col-md-4 col-md-offset-4">
+<div class="col-md-4">
     <!-- Products Container -->
     <div class="list-group">
       <div class="list-group-item">
@@ -10,22 +9,26 @@
           </em>
         </h3>
 
-        <!-- Image Gallery -->
+      <!-- Image Gallery -->
         <div class="img-wrap product-image">
-          <img [src]="gem.imagePath" alt="">
-        </div>
-
-        <!-- Image carousel -->
-        <ul class="img-thubmnail clearfix">
-          <li class="small-image pull-left thumbnail">
-            <img src="" alt="">
-          </li>
-        </ul>
+        <img [src]="gem.imagePath" alt="">
       </div>
 
-      <!-- Tabs -->
-      <app-tabs [gem]="gem"></app-tabs>
+      <!-- for the image carousel -->
+      <ul class="img-thubmnail clearfix">
+        <li class="small-image pull-left thumbnail">
+          <img src="" alt="">
+        </li>
+      </ul>
 
-        </div>
+      <div class="text-center">
+        <button (click)="gem.inventory = gem.inventory - 1" *ngIf="gem.inventory > 0" class="btn btn-success">Add to Cart</button>
+        <button *ngIf="gem.inventory <= 0" class="btn btn-danger" disabled>Sold Out</button>
+      </div>
     </div>
+
+    <!-- Adding Tabs Component -->
+    <app-tabs [gem]="gem"></app-tabs>
+
+  </div>
 </div>
