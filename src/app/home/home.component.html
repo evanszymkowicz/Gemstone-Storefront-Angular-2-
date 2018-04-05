@@ -1,10 +1,25 @@
+<!-- Shopping Cart HTML Shell-->
 <div class="container">
-  <div class="row">
-    <div class="col-md-10">
-      <app-gem *ngFor="let gem of homeGems" [gem]="gem"></app-gem>
+  <div class="col-md-10">
+    <app-gem *ngFor="let gem of homeGems" [gem]="gem"></app-gem>
+  </div>
+  <div class="col-md-2">
+    <div class="list-group">
+      <div class="list-group-item">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Shopping Cart</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>JoeSchmoe@ExampleSite.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-      <div class="col-md-2">
-      Shopping Cart
-    </div>
+    <!-- Shopping Cart HTML Shell -->
   </div>
 </div>

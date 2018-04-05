@@ -1,34 +1,29 @@
 <div class="col-md-4">
-    <!-- Products Container -->
-    <div class="list-group">
-      <div class="list-group-item">
-        <h3>
-          {{ gem.name }}
-          <em class="pull-right">
-            {{ gem.price | currency }}
-          </em>
-        </h3>
-
+  <!-- Products Container -->
+  <div class="list-group">
+    <div class="list-group-item">
+      <h3>{{ gem.name }}
+        <em class="pull-right">{{ gem.price | currency }}</em>
+      </h3>
       <!-- Image Gallery -->
-        <div class="img-wrap product-image">
-        <img [src]="gem.imagePath" alt="">
+      <div class="img-wrap product-image">
+        <img src="{{ gem.imagePath }}" alt="">
       </div>
-
-      <!-- for the image carousel -->
-      <ul class="img-thubmnail clearfix">
+      <!-- Image Carousel Scroll Item-->
+      <ul class="img-thumbnail clearfix">
         <li class="small-image pull-left thumbnail">
-          <img src="" alt="">
-        </li>
+            <img src="" alt="">
+          </li>
       </ul>
 
-      <div class="text-center">
-        <button (click)="gem.inventory = gem.inventory - 1" *ngIf="gem.inventory > 0" class="btn btn-success">Add to Cart</button>
-        <button *ngIf="gem.inventory <= 0" class="btn btn-danger" disabled>Sold Out</button>
+      <!-- Add to Cart Button -->
+      <div class="text-center add-to-cart">
+          <button class="btn btn-primary" *ngIf="gem.inventory > 0" (click)="gem.inventory = gem.inventory-1">Add to Cart</button>
+        <button class="btn btn-danger" disabled *ngIf="gem.inventory <= 0">Sold Out</button>
       </div>
     </div>
 
-    <!-- Adding Tabs Component -->
+    <!-- Product Tabs -->
     <app-tabs [gem]="gem"></app-tabs>
-
   </div>
 </div>

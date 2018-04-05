@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
 import { GemModel } from '../gem-model';
+
 import { GEMS } from '../gems';
 
 @Component({
