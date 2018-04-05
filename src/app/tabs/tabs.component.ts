@@ -14,7 +14,7 @@ export class TabsComponent implements OnInit {
   setTab(selectedTab: number) {
     this.tab = selectedTab;
   }
-
+  //* TODO: What does this do? *//
   constructor() { }
 
   ngOnInit() {

@@ -1,5 +1,4 @@
-import { Review Model } from './review-model';
-
+import { ReviewModel } from './review-model';
 
 export class GemModel {
   id: number;
@@ -7,6 +6,6 @@ export class GemModel {
   price: number;
   description: string;
   imagePath: string;
-  invetory: number;
+  inventory: number;
   reviews: ReviewModel[];
-};
+}
