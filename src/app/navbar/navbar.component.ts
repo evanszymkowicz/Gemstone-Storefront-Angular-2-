@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
   title = "Gem Store"
 
+  @Input() cart: CartModel;
+
   constructor() { }
 
   ngOnInit() {

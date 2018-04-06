@@ -1,3 +1,16 @@
-.list-group-item {
-  padding: 0px;
+.item_name {
+  padding: 3px;
+}
+
+.item_price {
+  padding: 3px;
+  font-weight: bold;
+}
+
+.item_quantity {
+  padding: 3px;
+}
+
+.shop {
+  margin: 50px;
 }
